@@ -50,6 +50,15 @@
     border-radius: 20px;
 }
 
+#github, #github:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#github > i {
+    margin-top: 10px;
+}
+
 /** views **/
 
 .streamImg {
