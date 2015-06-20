@@ -16,42 +16,70 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="app.css">
-
     <!--remove when project complete - this is here for WebStorm-->
     <link rel="stylesheet" href="ignore/bootstrap.min.css">
     <!--remove stop-->
+
+
+    <link rel="stylesheet" href="app.css">
+
+
 
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 <div id="container" class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <div id="menuBar" class="navbar navbar-default">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <a id="brand" class="navbar-brand" href="http://www.freecodecamp.com/">FCC</a>
-                        <ul id="menu-ul" class="nav navbar-nav">
-                            <li id="menuView1" class="menu-item"><a href="#/view1">All</a></li>
-                            <li id="menuView2" class="menu-item"><a href="#/view2">Online</a></li>
-                            <li id="menuView3" class="menu-item"><a href="#/view3">Offline</a></li>
-                        </ul>
-                        <a id="github" href="https://github.com/MichaelLeeHobbs/fccTwitch.tv"><i class='fa fa-github fa-3x'></i></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div id='search' class="form-group has-feedback">
-                            <!--<label class="control-label">Search</label>-->
-                            <input type="text" ng-model="searchText" class="form-control" placeholder="Search" />
-                            <i class="fa fa-search form-control-feedback"></i>
-                        </div>
-                    </div>
+    <div id="menuBar">
+        <div class="row">
+            <div class="col-xs-3" id="brand"><a href="http://www.freecodecamp.com/"><img src="<img class="streamImg" ng-src="http://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-f1b681380c0b0380-300x300.png" src="http://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-f1b681380c0b0380-300x300.png" id="exifviewer-img-2" exifid="-384275220" oldsrc="http://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-f1b681380c0b0380-300x300.png"></a></div>
+            <div class="col-xs-2 menu-item active" id="menuView1"><a href="#/view1">All</a></div>
+            <div class="col-xs-2 menu-item active" id="menuView2"><a href="#/view2">Online</a></div>
+            <div class="col-xs-2 menu-item active" id="menuView3"><a href="#/view3">Offline</a></div>
+            <div class="col-xs-3" id="github"><a href="https://github.com/MichaelLeeHobbs/fccTwitch.tv"><i
+                    class='fa fa-github fa-3x pull-right'></i></a></div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id='search' class="form-group has-feedback">
+                    <!--<label class="control-label">Search</label>-->
+                    <input type="text" ng-model="searchText" class="form-control" placeholder="Search"/>
+                    <i class="fa fa-search form-control-feedback"></i>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="menuBar" class="navbar navbar-default">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a id="brand" class="navbar-brand" href="http://www.freecodecamp.com/">FCC</a>
+                            <ul id="menu-ul" class="nav navbar-nav">
+                                <li id="menuView1" class="menu-item"><a href="#/view1">All</a></li>
+                                <li id="menuView2" class="menu-item"><a href="#/view2">Online</a></li>
+                                <li id="menuView3" class="menu-item"><a href="#/view3">Offline</a></li>
+                            </ul>
+                            <a id="github" href="https://github.com/MichaelLeeHobbs/fccTwitch.tv"><i
+                                    class='fa fa-github fa-3x'></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id='search' class="form-group has-feedback">
+
+                                <input type="text" ng-model="searchText" class="form-control" placeholder="Search"/>
+                                <i class="fa fa-search form-control-feedback"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+
     <!--view-->
     <div class="row">
         <div class="col-xs-12">
@@ -103,9 +131,9 @@
 <script>
     $(document).ready(function () {
         // add/remove class based on media size
-        $(window).on('resize', function() {
+        $(window).on('resize', function () {
             var $container = $('#container');
-            if($(window).width() < 800) {
+            if ($(window).width() < 800) {
                 console.log('small');
                 $container.addClass('container-fluid');
                 $container.removeClass('container');
