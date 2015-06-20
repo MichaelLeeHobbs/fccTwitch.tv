@@ -1,4 +1,5 @@
-# freeCodeCamp Zipline: Use the Twitch.tv JSON API - http://www.freecodecamp.com/challenges/zipline-use-the-twitch.tv-json-api
+# freeCodeCamp Zipline: Use the Twitch.tv JSON API 
+http://www.freecodecamp.com/challenges/zipline-use-the-twitch.tv-json-api
 
 This project was completed using angular-seed app. Information on angular-seed app can be found below.
 
