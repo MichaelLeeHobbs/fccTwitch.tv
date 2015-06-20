@@ -11,33 +11,50 @@
 }
 
 #menuBar {
+    background-color: #f8f8f8;
     margin-top: 10px;
     margin-bottom: 0;
-    padding-top: 10px;
+    padding-top: 20px;
     border: thin solid #e7e7e7;
     border-radius: 4px 4px 0 0;
 }
 
-#menu-ul {
-    margin: 7.5px 0;
-}
-
-@media (max-width: 800px){
-    #brand {
-        float: none;
-    }
-    .menu-item {
-        width: 20%;
-        float: none;
-    }
+#menuBar > div > div > a {
+    color: grey;
+    text-decoration: none;
 }
 
 .menu-item {
-    background-size: auto;
+    background-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    text-align: center;
 }
 
-.active > a {
+.active {
     border-radius: 20px;
+    background-color: #c0c0c0;
+}
+#brand {
+    margin-top: -15px;
+    margin-left: 5px;
+    margin-right: -5px;
+}
+
+#brand > a > img {
+    width: 48px;
+    height: 48px;
+    border-radius: 90px;
+}
+#github, #github:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#github > a > i {
+    margin-top: -15px;
+    margin-right: 5px;
 }
 
 #search {
@@ -50,14 +67,6 @@
     border-radius: 20px;
 }
 
-#github, #github:hover {
-    color: grey;
-    text-decoration: none;
-}
-
-#github > i {
-    margin-top: 10px;
-}
 
 /** views **/
 
