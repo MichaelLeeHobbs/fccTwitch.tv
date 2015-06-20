@@ -1,0 +1,22 @@
+<div class="stream">
+    <label title="{{data.title}}">
+        <a class='streamRow' href='{{data.link}}'>
+            <div class="row">
+                <div class="col-xs-2 vcenter">
+                    <img class='streamImg' ng-src="{{data.img}}">
+                </div>
+                <div class="col-xs-8 vcenter">
+                    <h4 class="name vcenter"> {{data.name}}</h4>
+                </div>
+                <div class="col-xs-2 vcenter">
+                    <i ng-class="{'fa fa-signal': data.active, 'fa fa-exclamation': !data.active}"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-offset-2">
+                    <p>{{data.titleShort}}</p>
+                </div>
+            </div>
+        </a>
+    </label>
+</div>

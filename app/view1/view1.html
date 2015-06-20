@@ -1,0 +1,10 @@
+<div ng-repeat="stream in streams | filter:searchText">
+    <stream-element data="stream"></stream-element>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".menu-item").removeClass("active");
+        $("#menuView1").addClass("active");
+    });
+</script>

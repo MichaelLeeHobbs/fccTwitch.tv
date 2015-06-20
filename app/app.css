@@ -1,0 +1,89 @@
+/** index.html **/
+#container {
+    max-width: 325px;
+}
+#viewContainer {
+    padding: 5px;
+    border: thin solid #e7e7e7;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #f8f8f8;
+}
+
+#menuBar {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    border: thin solid #e7e7e7;
+    border-radius: 4px 4px 0 0;
+}
+
+#menu-ul {
+    margin: 7.5px 0;
+}
+
+@media (max-width: 800px){
+    #brand {
+        float: none;
+    }
+    .menu-item {
+        width: 20%;
+        float: none;
+    }
+}
+
+.menu-item {
+    background-size: auto;
+}
+
+.active > a {
+    border-radius: 20px;
+}
+
+#search {
+    margin: 10px 5%;
+    width: 90%;
+    horiz-align: center;
+}
+#search > input {
+    border: thin solid #e7e7e7;
+    border-radius: 20px;
+}
+
+/** views **/
+
+.streamImg {
+    width: 48px;
+    height: 48px;
+    border-radius: 90px;
+}
+
+.streamRow {
+    display: block;
+    color: grey;
+    text-decoration: none;
+}
+
+.streamRow:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.streamRow > div > div > p {
+    margin-top: -15px;
+    font-size: 12px;
+}
+
+.fa-signal {
+    color: green;
+}
+
+.fa-exclamation {
+    color: red;
+}
+
+.stream > label {
+    display: block;
+}
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <!--remove when project complete - this is here for WebStorm-->
+    <link rel="stylesheet" href="ignore/bootstrap.min.css">
+    <!--remove stop-->
+
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<div id="container" class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="menuBar" class="navbar navbar-default">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a id="brand" class="navbar-brand" href="http://www.freecodecamp.com/">FCC</a>
+                        <ul id="menu-ul" class="nav navbar-nav">
+                            <li id="menuView1" class="menu-item"><a href="#/view1">All</a></li>
+                            <li id="menuView2" class="menu-item"><a href="#/view2">Online</a></li>
+                            <li id="menuView3" class="menu-item"><a href="#/view3">Offline</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id='search' class="form-group has-feedback">
+                            <!--<label class="control-label">Search</label>-->
+                            <input type="text" ng-model="searchText" class="form-control" placeholder="Search" />
+                            <i class="fa fa-search form-control-feedback"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--view-->
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="viewContainer" ng-view></div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<!--<div>Angular seed app: v<span app-version></span></div>-->
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+<!-- app scripts -->
+<script src="app.js"></script>
+<script src="js/utils.js"></script>
+
+<!-- Services -->
+<script src="services/twitchStreams.js"></script>
+
+<!-- views -->
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="view3/view3.js"></script>
+
+<!-- directives -->
+<script src="directives/stream/stream-directive.js"></script>
+
+<!-- components -->
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // add/remove class based on media size
+        $(window).on('resize', function() {
+            var $container = $('#container');
+            if($(window).width() < 800) {
+                console.log('small');
+                $container.addClass('container-fluid');
+                $container.removeClass('container');
+            } else {
+                console.log('big');
+                $container.addClass('container');
+                $container.removeClass('container-fluid');
+            }
+        });
+
+
+        // menu functionality
+        $(".menu-item").click(function () {
+            $(".menu-item").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+
+</body>
+</html>
